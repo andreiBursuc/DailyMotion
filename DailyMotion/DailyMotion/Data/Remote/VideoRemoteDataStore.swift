@@ -37,3 +37,15 @@ struct VideoRemoteDataStore: VideoRemoteDataStoreProtocol {
         }
     }
 }
+
+struct MockVideoRemoteDataStore: VideoRemoteDataStoreProtocol {
+
+    // MARK: - Parameters
+    var onSuccess: (() -> VideoModel)
+
+    // MARK: - VideoRemoteDataStoreProtocol
+
+    func getVideos(then success: @escaping SuccessCompletionHandler, error: @escaping ErrorCompletionHandler) {
+        success(onSuccess())
+    }
+}
