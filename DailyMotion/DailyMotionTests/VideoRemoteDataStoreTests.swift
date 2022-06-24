@@ -11,12 +11,12 @@ import XCTest
 
 class VideoRemoteDataStoreTests: XCTestCase {
     func testGetVideo() {
-        let videoModel = VideoModel(page: 1,
+        let videoModelRepresentation = GetVideoRepresentation(page: 1,
                                     limit: 1,
                                     explicit: true,
                                     total: 1,
                                     hasMore: false,
-                                    list: [VideoListModel(id: "id",
+                                    list: [VideoListModelRepresentation(id: "id",
                                                           thumbnail1080Url: "thumbnail1080Url",
                                                           title: "title",
                                                           description: "description" ,
@@ -25,21 +25,21 @@ class VideoRemoteDataStoreTests: XCTestCase {
         let expectation = self.expectation(description: "Get video")
 
         let dataStore = MockVideoRemoteDataStore {
-            return videoModel
+            return videoModelRepresentation
         }
 
         dataStore.getVideos { response in
-            XCTAssertEqual(response.page, videoModel.page)
-            XCTAssertEqual(response.limit, videoModel.limit)
-            XCTAssertEqual(response.explicit, videoModel.explicit)
-            XCTAssertEqual(response.total, videoModel.total)
-            XCTAssertEqual(response.hasMore, videoModel.hasMore)
-            XCTAssertEqual(response.list[0].id, videoModel.list[0].id)
-            XCTAssertEqual(response.list[0].thumbnail1080Url, videoModel.list[0].thumbnail1080Url)
-            XCTAssertEqual(response.list[0].title, videoModel.list[0].title)
-            XCTAssertEqual(response.list[0].description, videoModel.list[0].description)
-            XCTAssertEqual(response.list[0].url, videoModel.list[0].url)
-            XCTAssertEqual(response.list[0].createdTime, videoModel.list[0].createdTime)
+            XCTAssertEqual(response.page, videoModelRepresentation.page)
+            XCTAssertEqual(response.limit, videoModelRepresentation.limit)
+            XCTAssertEqual(response.explicit, videoModelRepresentation.explicit)
+            XCTAssertEqual(response.total, videoModelRepresentation.total)
+            XCTAssertEqual(response.hasMore, videoModelRepresentation.hasMore)
+            XCTAssertEqual(response.list[0].id, videoModelRepresentation.list[0].id)
+            XCTAssertEqual(response.list[0].thumbnail1080Url, videoModelRepresentation.list[0].thumbnail1080Url)
+            XCTAssertEqual(response.list[0].title, videoModelRepresentation.list[0].title)
+            XCTAssertEqual(response.list[0].description, videoModelRepresentation.list[0].description)
+            XCTAssertEqual(response.list[0].url, videoModelRepresentation.list[0].url)
+            XCTAssertEqual(response.list[0].createdTime, videoModelRepresentation.list[0].createdTime)
 
             expectation.fulfill()
         } error: { error in

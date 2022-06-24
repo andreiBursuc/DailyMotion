@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias SuccessCompletionHandler = (_ response: VideoModel) -> Void
+typealias SuccessCompletionHandler = (_ response: GetVideoRepresentation) -> Void
 typealias ErrorCompletionHandler = (_ error: DMError) -> Void
 
 protocol VideoRemoteDataStoreProtocol {
@@ -19,12 +19,12 @@ struct VideoRemoteDataStore: VideoRemoteDataStoreProtocol {
     // MARK: - VideoClientProtocol
 
     func getVideos(then success: @escaping SuccessCompletionHandler, error: @escaping ErrorCompletionHandler) {
-        Client<VideoModel>.get(.videos(channel: .news,
+        Client<GetVideoRepresentation>.get(.videos(channel: .news,
                                        limit: 20,
                                        fields: [.id, .thumbnail1080Url, .title, .description, .url, .createdTime])) { result in
             switch result {
             case .success(let model):
-                if let model = model as? VideoModel {
+                if let model = model as? GetVideoRepresentation {
                     DispatchQueue.main.async {
                         success(model)
                     }
@@ -41,7 +41,7 @@ struct VideoRemoteDataStore: VideoRemoteDataStoreProtocol {
 struct MockVideoRemoteDataStore: VideoRemoteDataStoreProtocol {
 
     // MARK: - Parameters
-    var onSuccess: (() -> VideoModel)
+    var onSuccess: (() -> GetVideoRepresentation)
 
     // MARK: - VideoRemoteDataStoreProtocol
 
