@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol VdeoRepositoryProtocol {
+protocol VideoRepositoryProtocol {
     /// Retrieve the list of videos
     func videos(then success: @escaping SuccessCompletionHandler, error: @escaping ErrorCompletionHandler)
 }
 
-class VideoRepository: VdeoRepositoryProtocol {
+class VideoRepository: VideoRepositoryProtocol {
 
     // MARK: - Parameters
 
@@ -24,7 +24,7 @@ class VideoRepository: VdeoRepositoryProtocol {
         self.videoRemoteDataStore = videoRemoteDataStore
     }
 
-    // MARK: - VdeoRepositoryProtocol
+    // MARK: - VideoRepositoryProtocol
 
     func videos(then success: @escaping SuccessCompletionHandler, error: @escaping ErrorCompletionHandler) {
         videoRemoteDataStore.getVideos { response in
