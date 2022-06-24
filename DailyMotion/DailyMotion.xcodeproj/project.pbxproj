@@ -24,6 +24,7 @@
 		719F03F828658A0300DE5302 /* VideoRemoteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03F728658A0300DE5302 /* VideoRemoteDataStore.swift */; };
 		719F03FA28658D3300DE5302 /* Endpoint+Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03F928658D3300DE5302 /* Endpoint+Video.swift */; };
 		719F03FC28659A5100DE5302 /* VideoRemoteDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03FB28659A5100DE5302 /* VideoRemoteDataStoreTests.swift */; };
+		719F04012865A3D000DE5302 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F04002865A3D000DE5302 /* GetVideosUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		719F03F728658A0300DE5302 /* VideoRemoteDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRemoteDataStore.swift; sourceTree = "<group>"; };
 		719F03F928658D3300DE5302 /* Endpoint+Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Video.swift"; sourceTree = "<group>"; };
 		719F03FB28659A5100DE5302 /* VideoRemoteDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRemoteDataStoreTests.swift; sourceTree = "<group>"; };
+		719F04002865A3D000DE5302 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVideosUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				719F03E7286476A700DE5302 /* Client */,
 				7163010028644C8E008B41F1 /* Data */,
+				719F03FD2865A38000DE5302 /* Domain */,
 				71964E842864479800BE0AE1 /* AppDelegate.swift */,
 				71964E862864479800BE0AE1 /* SceneDelegate.swift */,
 				71964E882864479800BE0AE1 /* ViewController.swift */,
@@ -150,7 +153,6 @@
 				71964E8D2864479F00BE0AE1 /* Assets.xcassets */,
 				71964E8F2864479F00BE0AE1 /* LaunchScreen.storyboard */,
 				71964E922864479F00BE0AE1 /* Info.plist */,
-				719F03F12864C93900DE5302 /* VideoModel.swift */,
 			);
 			path = DailyMotion;
 			sourceTree = "<group>";
@@ -181,6 +183,31 @@
 				719F03F32865895900DE5302 /* DMError.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		719F03FD2865A38000DE5302 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				719F03FF2865A3B500DE5302 /* UseCases */,
+				719F03FE2865A3A300DE5302 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		719F03FE2865A3A300DE5302 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				719F03F12864C93900DE5302 /* VideoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		719F03FF2865A3B500DE5302 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				719F04002865A3D000DE5302 /* GetVideosUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +347,7 @@
 				719F03F22864C93900DE5302 /* VideoModel.swift in Sources */,
 				71964E872864479800BE0AE1 /* SceneDelegate.swift in Sources */,
 				719F03F828658A0300DE5302 /* VideoRemoteDataStore.swift in Sources */,
+				719F04012865A3D000DE5302 /* GetVideosUseCase.swift in Sources */,
 				719F03E9286476B700DE5302 /* Client.swift in Sources */,
 				719F03F42865895900DE5302 /* DMError.swift in Sources */,
 				719F03FA28658D3300DE5302 /* Endpoint+Video.swift in Sources */,
