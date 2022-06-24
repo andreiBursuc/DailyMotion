@@ -11,7 +11,7 @@ protocol GetVideosUseCaseProtocol {
     var videoRepository: VideoRepositoryProtocol { get }
 
     /// Retrieve the list of videos
-    func retrieveVideos(then success: @escaping SuccessCompletionHandler, error: @escaping ErrorCompletionHandler)
+    func retrieveVideos(then success: @escaping VideoSuccessCompletionHandler, error: @escaping ErrorCompletionHandler)
 }
 
 struct GetVideosUseCase: GetVideosUseCaseProtocol {
@@ -28,7 +28,7 @@ struct GetVideosUseCase: GetVideosUseCaseProtocol {
 
     // MARK: - GetVideosUseCaseProtocol
 
-    func retrieveVideos(then success: @escaping SuccessCompletionHandler, error: @escaping ErrorCompletionHandler) {
+    func retrieveVideos(then success: @escaping VideoSuccessCompletionHandler, error: @escaping ErrorCompletionHandler) {
         videoRepository.videos(then: success, error: error)
     }
 }

@@ -9,11 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let videoRepo = VideoRepository()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        VideoRepository().videos { response in
+        videoRepo.videos { response in
             dump(response)
         } error: { error in
             dump(error)

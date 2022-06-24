@@ -25,6 +25,8 @@
 		719F03FA28658D3300DE5302 /* Endpoint+Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03F928658D3300DE5302 /* Endpoint+Video.swift */; };
 		719F03FC28659A5100DE5302 /* VideoRemoteDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03FB28659A5100DE5302 /* VideoRemoteDataStoreTests.swift */; };
 		719F04012865A3D000DE5302 /* GetVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F04002865A3D000DE5302 /* GetVideosUseCase.swift */; };
+		719F04072865A7CD00DE5302 /* GetVideoRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F04062865A7CD00DE5302 /* GetVideoRepresentation.swift */; };
+		719F04092865B1DB00DE5302 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F04082865B1DB00DE5302 /* VideosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		719F03F928658D3300DE5302 /* Endpoint+Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Video.swift"; sourceTree = "<group>"; };
 		719F03FB28659A5100DE5302 /* VideoRemoteDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRemoteDataStoreTests.swift; sourceTree = "<group>"; };
 		719F04002865A3D000DE5302 /* GetVideosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVideosUseCase.swift; sourceTree = "<group>"; };
+		719F04062865A7CD00DE5302 /* GetVideoRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVideoRepresentation.swift; sourceTree = "<group>"; };
+		719F04082865B1DB00DE5302 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,18 +102,19 @@
 			isa = PBXGroup;
 			children = (
 				7163010328644CD8008B41F1 /* Repositories */,
-				7163010228644CB2008B41F1 /* Remote */,
+				719F04042865A78E00DE5302 /* Remote */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		7163010228644CB2008B41F1 /* Remote */ = {
+		7163010228644CB2008B41F1 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				719F04052865A7B100DE5302 /* GetVideo */,
 				719F03F728658A0300DE5302 /* VideoRemoteDataStore.swift */,
 				719F03F928658D3300DE5302 /* Endpoint+Video.swift */,
 			);
-			path = Remote;
+			path = Video;
 			sourceTree = "<group>";
 		};
 		7163010328644CD8008B41F1 /* Repositories */ = {
@@ -146,6 +151,7 @@
 				719F03E7286476A700DE5302 /* Client */,
 				7163010028644C8E008B41F1 /* Data */,
 				719F03FD2865A38000DE5302 /* Domain */,
+				719F04022865A6EE00DE5302 /* Presentation */,
 				71964E842864479800BE0AE1 /* AppDelegate.swift */,
 				71964E862864479800BE0AE1 /* SceneDelegate.swift */,
 				71964E882864479800BE0AE1 /* ViewController.swift */,
@@ -208,6 +214,38 @@
 				719F04002865A3D000DE5302 /* GetVideosUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		719F04022865A6EE00DE5302 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				719F04032865A70600DE5302 /* Videos */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		719F04032865A70600DE5302 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				719F04082865B1DB00DE5302 /* VideosViewController.swift */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		719F04042865A78E00DE5302 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				7163010228644CB2008B41F1 /* Video */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		719F04052865A7B100DE5302 /* GetVideo */ = {
+			isa = PBXGroup;
+			children = (
+				719F04062865A7CD00DE5302 /* GetVideoRepresentation.swift */,
+			);
+			path = GetVideo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,7 +387,9 @@
 				719F03F828658A0300DE5302 /* VideoRemoteDataStore.swift in Sources */,
 				719F04012865A3D000DE5302 /* GetVideosUseCase.swift in Sources */,
 				719F03E9286476B700DE5302 /* Client.swift in Sources */,
+				719F04092865B1DB00DE5302 /* VideosViewController.swift in Sources */,
 				719F03F42865895900DE5302 /* DMError.swift in Sources */,
+				719F04072865A7CD00DE5302 /* GetVideoRepresentation.swift in Sources */,
 				719F03FA28658D3300DE5302 /* Endpoint+Video.swift in Sources */,
 				719F03E62864734600DE5302 /* VideoRepository.swift in Sources */,
 			);
