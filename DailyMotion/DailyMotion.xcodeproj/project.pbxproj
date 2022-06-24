@@ -16,6 +16,14 @@
 		71964E9C286447A000BE0AE1 /* DailyMotionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71964E9B286447A000BE0AE1 /* DailyMotionTests.swift */; };
 		71964EA6286447A000BE0AE1 /* DailyMotionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71964EA5286447A000BE0AE1 /* DailyMotionUITests.swift */; };
 		71964EA8286447A000BE0AE1 /* DailyMotionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71964EA7286447A000BE0AE1 /* DailyMotionUITestsLaunchTests.swift */; };
+		719F03E62864734600DE5302 /* VideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03E52864734600DE5302 /* VideoRepository.swift */; };
+		719F03E9286476B700DE5302 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03E8286476B700DE5302 /* Client.swift */; };
+		719F03EF2864A0FB00DE5302 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03EE2864A0FB00DE5302 /* Endpoint.swift */; };
+		719F03F22864C93900DE5302 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03F12864C93900DE5302 /* VideoModel.swift */; };
+		719F03F42865895900DE5302 /* DMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03F32865895900DE5302 /* DMError.swift */; };
+		719F03F828658A0300DE5302 /* VideoRemoteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03F728658A0300DE5302 /* VideoRemoteDataStore.swift */; };
+		719F03FA28658D3300DE5302 /* Endpoint+Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03F928658D3300DE5302 /* Endpoint+Video.swift */; };
+		719F03FC28659A5100DE5302 /* VideoRemoteDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F03FB28659A5100DE5302 /* VideoRemoteDataStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		71964EA1286447A000BE0AE1 /* DailyMotionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyMotionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71964EA5286447A000BE0AE1 /* DailyMotionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMotionUITests.swift; sourceTree = "<group>"; };
 		71964EA7286447A000BE0AE1 /* DailyMotionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMotionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		719F03E52864734600DE5302 /* VideoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRepository.swift; sourceTree = "<group>"; };
+		719F03E8286476B700DE5302 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		719F03EE2864A0FB00DE5302 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		719F03F12864C93900DE5302 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		719F03F32865895900DE5302 /* DMError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMError.swift; sourceTree = "<group>"; };
+		719F03F728658A0300DE5302 /* VideoRemoteDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRemoteDataStore.swift; sourceTree = "<group>"; };
+		719F03F928658D3300DE5302 /* Endpoint+Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Video.swift"; sourceTree = "<group>"; };
+		719F03FB28659A5100DE5302 /* VideoRemoteDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRemoteDataStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +92,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7163010028644C8E008B41F1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7163010328644CD8008B41F1 /* Repositories */,
+				7163010228644CB2008B41F1 /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7163010228644CB2008B41F1 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				719F03F728658A0300DE5302 /* VideoRemoteDataStore.swift */,
+				719F03F928658D3300DE5302 /* Endpoint+Video.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		7163010328644CD8008B41F1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				719F03E52864734600DE5302 /* VideoRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		71964E782864479700BE0AE1 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +141,8 @@
 		71964E832864479700BE0AE1 /* DailyMotion */ = {
 			isa = PBXGroup;
 			children = (
+				719F03E7286476A700DE5302 /* Client */,
+				7163010028644C8E008B41F1 /* Data */,
 				71964E842864479800BE0AE1 /* AppDelegate.swift */,
 				71964E862864479800BE0AE1 /* SceneDelegate.swift */,
 				71964E882864479800BE0AE1 /* ViewController.swift */,
@@ -106,6 +150,7 @@
 				71964E8D2864479F00BE0AE1 /* Assets.xcassets */,
 				71964E8F2864479F00BE0AE1 /* LaunchScreen.storyboard */,
 				71964E922864479F00BE0AE1 /* Info.plist */,
+				719F03F12864C93900DE5302 /* VideoModel.swift */,
 			);
 			path = DailyMotion;
 			sourceTree = "<group>";
@@ -114,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				71964E9B286447A000BE0AE1 /* DailyMotionTests.swift */,
+				719F03FB28659A5100DE5302 /* VideoRemoteDataStoreTests.swift */,
 			);
 			path = DailyMotionTests;
 			sourceTree = "<group>";
@@ -125,6 +171,16 @@
 				71964EA7286447A000BE0AE1 /* DailyMotionUITestsLaunchTests.swift */,
 			);
 			path = DailyMotionUITests;
+			sourceTree = "<group>";
+		};
+		719F03E7286476A700DE5302 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				719F03E8286476B700DE5302 /* Client.swift */,
+				719F03EE2864A0FB00DE5302 /* Endpoint.swift */,
+				719F03F32865895900DE5302 /* DMError.swift */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +315,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				71964E892864479800BE0AE1 /* ViewController.swift in Sources */,
+				719F03EF2864A0FB00DE5302 /* Endpoint.swift in Sources */,
 				71964E852864479800BE0AE1 /* AppDelegate.swift in Sources */,
+				719F03F22864C93900DE5302 /* VideoModel.swift in Sources */,
 				71964E872864479800BE0AE1 /* SceneDelegate.swift in Sources */,
+				719F03F828658A0300DE5302 /* VideoRemoteDataStore.swift in Sources */,
+				719F03E9286476B700DE5302 /* Client.swift in Sources */,
+				719F03F42865895900DE5302 /* DMError.swift in Sources */,
+				719F03FA28658D3300DE5302 /* Endpoint+Video.swift in Sources */,
+				719F03E62864734600DE5302 /* VideoRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71964E9C286447A000BE0AE1 /* DailyMotionTests.swift in Sources */,
+				719F03FC28659A5100DE5302 /* VideoRemoteDataStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
